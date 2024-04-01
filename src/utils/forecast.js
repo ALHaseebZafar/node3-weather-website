@@ -10,7 +10,9 @@ const forecast=(longitude,latitude,callback)=>{
         callback('entered wrong coordinates',undefined);
       }
       else{
-        callback(undefined,body.current.weather_descriptions[0]+'it is curreently '+body.current.temperature+'it feels like '+body.current.feelslike+' degrees out')
+        
+        callback(undefined
+          ,body.current.weather_descriptions[0]+'it is curreently '+body.current.temperature+'it feels like '+body.current.feelslike+' degrees out.the Humidity is'+body.current.humidity+'%');
       }
     })
   }
